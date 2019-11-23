@@ -1,22 +1,8 @@
 ---
-# tasks file for docker-install-role
-- name: ensure old versions of Docker are not installed
-  become: true
-  become_method: sudo
-  package:
-    name:
-      - docker
-      - docker-common
-      - docker-engine
-    state: absent
-    
 - name: install docker
-  become: true
-  become_method: sudo
-  package:
-    name: "{{ docker_package }}"
-    state: "{{ docker_package_state }}"
-  notify: restart docker
+  yum:
+    name: docker
+    state: present
 
 - name: install python docker packages
   become: true
