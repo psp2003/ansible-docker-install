@@ -11,13 +11,13 @@
 #    name: docker-py
 #    state: present
 
-- name: ensure docker is started and enabled at boot
+#- name: ensure docker is started and enabled at boot
 #  become: true
 #  become_method: sudo
-  service:
-    name: docker
-    state: "{{ docker_service_state }}"
-    enabled: "{{ docker_service_enabled }}"
+#  service:
+#    name: docker
+#    state: "{{ docker_service_state }}"
+#    enabled: "{{ docker_service_enabled }}"
 
 - name: ensure handlers are notified now to avoid firewall conflicts
   meta: flush_handlers
