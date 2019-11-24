@@ -22,11 +22,11 @@
 - name: ensure handlers are notified now to avoid firewall conflicts
   meta: flush_handlers
 
-- name: ensure docker users are added to the docker group
+#- name: ensure docker users are added to the docker group
 #  become: true
 #  become_method: sudo
-  user:
-    name: "{{ item }}"
-    groups: docker
-    append: true
-  with_items: "{{ docker_users }}"
+#  user:
+#    name: "{{ item }}"
+#    groups: docker
+#    append: true
+#  with_items: "{{ docker_users }}"
