@@ -5,14 +5,14 @@
     state: present
 
 - name: install python docker packages
-  become: true
+#  become: true
 #  become_method: sudo
   pip:
     name: docker-py
     state: present
 
 - name: ensure docker is started and enabled at boot
-  become: true
+#  become: true
 #  become_method: sudo
   service:
     name: docker
@@ -23,7 +23,7 @@
   meta: flush_handlers
 
 - name: ensure docker users are added to the docker group
-  become: true
+#  become: true
 #  become_method: sudo
   user:
     name: "{{ item }}"
