@@ -4,12 +4,12 @@
     name: docker
     state: present
 
-- name: install python docker packages
+#- name: install python docker packages
 #  become: true
 #  become_method: sudo
-  pip:
-    name: docker-py
-    state: present
+#  pip:
+#    name: docker-py
+#    state: present
 
 - name: ensure docker is started and enabled at boot
 #  become: true
