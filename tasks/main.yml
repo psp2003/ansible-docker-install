@@ -5,8 +5,6 @@
     state: present
 
 #- name: install python docker packages
-#  become: true
-#  become_method: sudo
 #  pip:
 #    name: docker-py
 #    state: present
